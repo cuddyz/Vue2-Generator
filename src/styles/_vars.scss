@@ -1,0 +1,23 @@
+
+$transitionTime: 200ms;
+$bottombar-height: 4rem;
+$sidebarWidthMobile: 4rem;
+$sidebarWidthLaptop: 8rem;
+$photoSize: 2rem;
+
+// z-indexes
+$z-layers: (
+  dropdown: 10,
+  titlebar: 9,
+  alert: 8,
+  page-loader: 7,
+  panel: 6,
+  backshade: 5,
+  actionbar: 4,
+  bottombar: 3
+);
+@function z($key) {
+  @if map-has-key($z-layers, $key) {
+    @return map-get($z-layers, $key);
+  }
+}
